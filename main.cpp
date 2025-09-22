@@ -1,6 +1,7 @@
 //COMSC-210-5293 | Lab 12 | Keng C Chan
 //IDE used: Visual Studio Code (VS Code) 
 #include <iostream>
+#include <fstream>
 #include <algorithm>  // for sort(), find()
 #include <numeric>    // for accumulate()
 #include <array>
