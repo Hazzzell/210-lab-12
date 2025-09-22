@@ -37,8 +37,8 @@ int main() {
     cout << "4.  Element 2: " << temperatures[2] << endl;
     cout << "5.  Front: " << temperatures.front() << endl;
     cout << "6.  Back: " << temperatures.back() << endl;
-    cout << "7.  Empty? " << (temperatures.empty() == 0? "False" : "True") << endl;
-    cout << "8.  Address? " << temperatures.data() << endl;
+    cout << "7.  Is it Empty? " << (temperatures.empty() == 0? "False" : "True") << endl;
+    cout << "8.  What's the Address? " << temperatures.data() << endl;
 
     // use iterators to sort ascending
     sort(temperatures.begin(), temperatures.end());
@@ -47,10 +47,10 @@ int main() {
     // use iterators to sort descending
     sort(temperatures.rbegin(), temperatures.rend());
     cout << "10. Reverse sorted temperatures: ";
-    for (double val : temperatures) cout << t << " "; cout << endl;
+    for (double t : temperatures) cout << t << " "; cout << endl;
 
     // find an element
-    double target = 75.5;   // search target
+    double target = 75.0;   // search target
     array<double, DAYS>::iterator it;  // declare iterator to point to the found element
     it = find(temperatures.begin(), temperatures.end(), target);
     cout << "11. Value " << target;
@@ -65,8 +65,9 @@ int main() {
     cout << "13. Min: " << *min_element(temperatures.begin(), temperatures.end()) << endl;
     cout << "14. Sum: " << accumulate(temperatures.begin(), temperatures.end(), 0) << endl;
 
-    // create several empty <array> and fill with one value
-    array<double, 5> week1, week2;
+    // create empty <array> and fill with one value
+    array<double, 7> week1;
+    array<double, 7> week2;
     week1.fill(80.0);
     week2.fill(70.0);
     cout << "15. Week1 temperatures: ";
